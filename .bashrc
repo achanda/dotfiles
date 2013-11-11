@@ -1,5 +1,6 @@
 export HISTSIZE=5000
 export GOROOT=/usr/local/go
+export EDITOR=vim
 export PATH=$PATH:/usr/local/bin:$GOROOT/bin
 alias tmux="TERM=screen-256color-bce tmux"
 alias ls='ls -G -la'
