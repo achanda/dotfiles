@@ -19,3 +19,7 @@
         added = yellow
         changed = green
         untracked = cyan
+[log]
+        decorate = full
+[alias]
+        lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
