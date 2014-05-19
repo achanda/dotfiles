@@ -3,7 +3,7 @@ export GOROOT=/usr/local/go
 export EDITOR=vim
 export PATH=$PATH:/usr/local/bin:$GOROOT/bin
 alias tmux="TERM=screen-256color-bce tmux"
-alias ls='ls -G -la'
+alias ls='ls --color=always -la'
 alias grep='grep -rn'
 
 if [ -f ~/.git-prompt.sh ]; then
