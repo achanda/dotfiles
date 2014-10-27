@@ -12,6 +12,9 @@ if [ -f ~/.git-prompt.sh ]; then
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWCOLORHINTS=true
 GIT_PS1_UNTRACKEDFILES=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWUPSTREAM="auto"
 PROMPT_COMMAND="__git_ps1 '\u@\h:\w' '\\$ '"
 fi
 source /usr/local/etc/bash_completion.d/git-completion.bash
