@@ -10,7 +10,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'elzr/vim-json'
-Plugin 'wting/rust.vim'
+Plugin 'rust-lang/rust.vim'
 call vundle#end()
 "filetype plugin indent on
 
