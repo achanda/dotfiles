@@ -48,3 +48,8 @@ set backspace=indent,eol,start
 " For rust
 filetype on
 au BufNewFile,BufRead *.rs set filetype=rust
+
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
