@@ -3,7 +3,7 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=$GOROOT/misc/vim
-filetype plugin indent on
+filetype plugin on
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/syntastic'
@@ -11,6 +11,8 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'elzr/vim-json'
 Plugin 'rust-lang/rust.vim'
+Plugin 'rking/ag.vim'
+Plugin 'phildawes/racer'
 call vundle#end()
 "filetype plugin indent on
 
@@ -21,10 +23,15 @@ let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#virtualenv#enabled = 1
 let g:airline#extensions#branch#enabled = 1
+let g:airline_left_sep='>'
 
 " syntastic
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_aggregate_errors = 1
+
+" Racer
+set hidden
+let g:racer_cmd = "/Users/Abhishek/src/racer/target/release/racer"
 
 syntax on
 set nu
@@ -37,7 +44,7 @@ set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\ %{fugitive#sta
 
 set foldmethod=indent
 set foldlevel=99
-
+set paste
 "" Encoding
 set encoding=utf-8
 set fileencoding=utf-8
@@ -53,3 +60,8 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g'\"" | endif
 endif
+
+" Extra config
+set cursorline
+set showcmd
+set showmatch
