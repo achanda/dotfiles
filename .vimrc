@@ -13,6 +13,9 @@ Plugin 'elzr/vim-json'
 Plugin 'rust-lang/rust.vim'
 Plugin 'rking/ag.vim'
 Plugin 'phildawes/racer'
+Plugin 'dgryski/vim-godef'
+Plugin 'Blackrush/vim-gocode'
+Plugin 'majutsushi/tagbar'
 call vundle#end()
 "filetype plugin indent on
 
@@ -45,7 +48,8 @@ set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\ %{fugitive#sta
 set foldmethod=indent
 set foldlevel=99
 set paste
-"" Encoding
+
+" Encoding
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
@@ -65,3 +69,12 @@ endif
 set cursorline
 set showcmd
 set showmatch
+autocmd FileType make set noexpandtab
+autocmd FileType go set noexpandtab
+
+" Go config
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+let g:go_bin_path = expand("/Users/Abhishek/workspace/go/bin/")
+let g:go_fmt_command = "GoImports"
