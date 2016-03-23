@@ -1,13 +1,12 @@
 [user]
-        name = Abhishek Chanda
-        email = abhishek@cloudscaling.com
+	name = Abhishek Chanda
+	email = abhishek.becs@gmail.com
 [gitreview]
         username = abhishek
-[core]
-        editor = vim
+	username = achanda
 [color]
         # Use colors in Git commands that are capable of colored output when outputting to the terminal
-        ui = auto
+        ui = true
 [color "branch"]
         current = yellow reverse
         local = yellow
@@ -23,7 +22,18 @@
         untracked = cyan
 [log]
         decorate = full
-[push]
-        default = upstream
 [alias]
-        lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+        lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --graph
+        all = !git lg --all
+        allrefs = !git reflog | cut -f1 -d\" \" | xargs git lg
+	get = !git fetch upstream && git rebase upstream/master
+[credential]
+	helper = osxkeychain
+[http]
+	cookiefile = /Users/Abhishek/.gitcookies
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[push]
+	default = simple
