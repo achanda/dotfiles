@@ -13,9 +13,9 @@ Plugin 'elzr/vim-json'
 Plugin 'rust-lang/rust.vim'
 Plugin 'rking/ag.vim'
 Plugin 'phildawes/racer'
-Plugin 'dgryski/vim-godef'
-Plugin 'Blackrush/vim-gocode'
 Plugin 'majutsushi/tagbar'
+Plugin 'fatih/vim-go'
+Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 "filetype plugin indent on
 
