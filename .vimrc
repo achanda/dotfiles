@@ -76,5 +76,10 @@ autocmd FileType go set noexpandtab
 filetype plugin indent off
 set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
-let g:go_bin_path = expand("/Users/Abhishek/workspace/go/bin/")
-let g:go_fmt_command = "GoImports"
+let g:go_fmt_command = "goimports"
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
