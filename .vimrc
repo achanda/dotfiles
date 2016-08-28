@@ -23,7 +23,6 @@ call vundle#end()
 let g:airline_theme = 'powerlineish'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
-let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#virtualenv#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline_left_sep='>'
@@ -40,7 +39,6 @@ syntax on
 set nu
 set wrap
 set hlsearch
-set expandtab
 set directory=/tmp/
 set laststatus=2
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\ %{fugitive#statusline()}
@@ -76,10 +74,7 @@ autocmd FileType go set noexpandtab
 filetype plugin indent off
 set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
-let g:go_fmt_command = "goimports"
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_types = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
+let g:go_bin_path = expand("/Users/Abhishek/workspace/go/bin/")
+let g:go_fmt_command = "GoImports"
+
+let g:pymode_lint_write = 0       "turn off running pylint on file save
