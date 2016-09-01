@@ -57,6 +57,7 @@ set backspace=indent,eol,start
 " For rust
 filetype on
 au BufNewFile,BufRead *.rs set filetype=rust
+let g:rustfmt_autosave = 1
 
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
